@@ -1,0 +1,36 @@
+name: meal_habbit_app
+description: "A new Flutter project."
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.3
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+  sqflite: ^2.2.0+4  # For SQLite database
+  path: ^1.8.0       # For database path handling
+  provider: ^6.0.0   # For state management
+  intl: ^0.17.0      # For date/time formatting
+  fl_chart: ^0.55.1  # For charts (optional)
+
+ 
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+
+flutter:
+
+
+  uses-material-design: true
+
+ 
