@@ -77,7 +77,7 @@ class MealPlannerApp extends StatelessWidget {
         '/bmi': (context) => const BmiPage(),
         '/mealRecording': (context) => const MealRecordingPage(),
         '/statistics': (context) => const StatisticsPage(),
-        '/recommendations': (context) => const RecommendationsPage(),
+        '/recommendations': (context) => const RecommendationsPage(bmiCategory: '',),
         '/mealHistory': (context) => const MealHistoryPage(),
       },
       initialRoute: '/',

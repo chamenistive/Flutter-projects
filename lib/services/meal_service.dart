@@ -118,6 +118,16 @@ class MealService {
     throw Exception('Failed to delete meal: $e');
   }
 }
-
+static Future<List<Meal>> getMealsByCalories(int minCalories, int maxCalories) async {
+  final db = await DatabaseHelper.initializeDb();
+  final List<Map<String, dynamic>> maps = await db.query(
+    'meals',
+    where: 'calories >= ? AND calories <= ?',
+    whereArgs: [minCalories, maxCalories],
+  );
+  return List.generate(maps.length, (i) {
+    return Meal.fromMap(maps[i]);
+  });
+}
   
 }
